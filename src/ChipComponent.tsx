@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent, FocusEvent, KeyboardEvent } from "react";
 import { Form, Row, Col } from "react-bootstrap";
-import "./AutocompleteChips.css";
+import "./ChipComponent.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
@@ -10,7 +10,7 @@ interface User {
   email: string;
 }
 
-const AutocompleteChips: React.FC = () => {
+const ChipComponent: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [selectedChips, setSelectedChips] = useState<string[]>([]);
   const [chipOrder, setChipOrder] = useState<string[]>([]);
@@ -97,7 +97,7 @@ const AutocompleteChips: React.FC = () => {
   };
 
   return (
-    <Row className="autocomplete-chips-container">
+    <Row className="chip-component">
       <Col xs={8} className="selected-chips-container">
         {selectedChips.map((chip, index) => (
           <span
@@ -146,4 +146,4 @@ const AutocompleteChips: React.FC = () => {
   );
 };
 
-export default AutocompleteChips;
+export default ChipComponent;

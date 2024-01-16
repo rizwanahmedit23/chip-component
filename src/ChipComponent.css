@@ -1,4 +1,4 @@
-.autocomplete-chips-container { 
+.chip-component { 
   font-family: sans-serif;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
   padding: 2px;
 }
 
-.autocomplete-chips-container::after {
+.chip-component::after {
   content: "";
   position: absolute;
   bottom: 0;

@@ -1,9 +1,9 @@
 import './App.css';
-import AutocompleteChips from './AutocompleteChips.tsx';
+import ChipComponent from './ChipComponent.tsx';
 
 function App() {
   return (
-      <AutocompleteChips />
+      <ChipComponent />
   );
 }
 
