@@ -1,9 +1,12 @@
-.autocomplete-chips-container {
+.autocomplete-chips-container { 
   font-family: sans-serif;
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: center;
   flex-wrap: wrap; 
+  width: 50%; /* Set the width to 50% */
+  margin: 0 auto;
 }
 
 .selected-chips-container {
@@ -40,14 +43,26 @@
 
 .autocomplete-list {
   position: absolute;
-  top: calc(100% + 5px);
-  left: 0;
+  top: calc(95%);
+  left: calc(0.5%);
   background-color: white;
   border: 1px solid #ccc;
   z-index: 1;
   max-height: 150px;
   overflow-y: auto;
   box-sizing: border-box; 
+  scrollbar-width: thin;
+  border-radius: 5px 0px 0px 0px; /* Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-list::-webkit-scrollbar {
+  width: 8px;/* Width of the scrollbar */
+}
+
+.autocomplete-list::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px; 
 }
 
 .chip {
@@ -76,9 +91,6 @@
   border: 1px solid;
 }
 
-.chip {
- 
-}
 
 .autocomplete-email {
   color: grey;
@@ -89,7 +101,10 @@
   height: 30px;
   display: flex;
   align-items: center;
+  /* justify-content: space-around; */
   gap: 5px;
+  margin-right: 2px;
+  padding-right: 10px;
 }
 
 .autocomplete-list :hover {
@@ -100,4 +115,9 @@
   width: 20px;
   height: 20px;
   /* margin-right: 5px; */
+}
+.user-image {
+  width: 20px; 
+  height: 20px; 
+  border-radius: 50%;
 }

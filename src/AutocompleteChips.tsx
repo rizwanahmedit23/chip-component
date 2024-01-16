@@ -104,7 +104,7 @@ const AutocompleteChips: React.FC = () => {
             key={chip}
             className={`chip ${highlightLastChip && index === selectedChips.length - 1 ? "highlighted" : ""}`}
           >
-            <span className="chip-icon">&#128100;</span> {chip}
+            <img className="user-image" src={require('./assets/pic5.png')} alt="image not found" /> {chip}
             <span className="chip-remove" onClick={() => handleRemoveChip(chip)}>
               &#10006;
             </span>
@@ -134,7 +134,8 @@ const AutocompleteChips: React.FC = () => {
                 className="autocomplete-item"
                 onClick={() => handleAddChip(user)}
               >
-                <span className="fas">&#128100;</span> <span>{user.name}</span>
+                <img className="user-image" src={require('./assets/pic5.png')} alt="image not found" />
+                <span>{user.name}</span>
                 <span className="autocomplete-email">{user.email}</span>
               </div>
             ))}
